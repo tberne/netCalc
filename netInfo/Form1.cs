@@ -101,7 +101,16 @@ namespace netInfo
 				}
 				else
 				{
-					markFail(tbNetMask, true);
+					string binMask = convertToBinIp(iMask);
+					if(binMask.Contains("01") || binMask.Contains("0.1"))
+					{
+						markFail(tbNetMask, false);
+						success = false;
+					}
+					else
+					{
+						markFail(tbNetMask, true);
+					}
 				}
 			}
 
@@ -138,8 +147,6 @@ namespace netInfo
 			i |= x2 << 16;
 			i |= x1 << 24;
 
-			Console.WriteLine(Convert.ToString(i, 2));
-
 			return i;
 		}
 
@@ -156,8 +163,14 @@ namespace netInfo
 
 		private void clearTab1Data()
 		{
-			lblFirstHost.Text = lblIpBin.Text = lblLastHost.Text = lblMaskBin.Text
-				= lblNumHosts.Text = "";
+			lblFirstHost.Text 
+				= lblIpBin.Text 
+				= lblLastHost.Text 
+				= lblMaskBin.Text
+				= lblNumHosts.Text 
+				= lblBroadcast.Text
+				= lblNetAddr.Text
+				= "";
 		}
 
 		private void updateTab1Info(int ip, int mask)
@@ -180,8 +193,6 @@ namespace netInfo
 
 			var lastHostStr = convertToBinIp(broadCastIp - 1);
 			lblLastHost.Text = lastHostStr + " (" + convertBinaryToReadable(lastHostStr) + ")";
-
-
 		}
 
 		private String convertToBinIp(int ip)
