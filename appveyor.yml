@@ -6,5 +6,5 @@ platform:
   - Any CPU
 
 artifacts:
-  - path netInfo\bin\$(configuration)\*
-    name $(configuration)
+  - path: netInfo\bin\$(configuration)\*
+    name: $(configuration)
