@@ -49,6 +49,10 @@
 			this.tbNetAddr = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.t2TbBits = new System.Windows.Forms.TextBox();
+			this.label25 = new System.Windows.Forms.Label();
+			this.t2TbIp = new System.Windows.Forms.TextBox();
+			this.label24 = new System.Windows.Forms.Label();
 			this.t2LblBroadcast = new System.Windows.Forms.Label();
 			this.label11 = new System.Windows.Forms.Label();
 			this.t2LblNetAddr = new System.Windows.Forms.Label();
@@ -59,14 +63,12 @@
 			this.label17 = new System.Windows.Forms.Label();
 			this.t2LblNumOfHosts = new System.Windows.Forms.Label();
 			this.label19 = new System.Windows.Forms.Label();
-			this.t2LblMaskBin = new System.Windows.Forms.Label();
+			this.t2LblMaskDec = new System.Windows.Forms.Label();
 			this.label21 = new System.Windows.Forms.Label();
 			this.t2LblIpBin = new System.Windows.Forms.Label();
 			this.label23 = new System.Windows.Forms.Label();
-			this.t2TbIp = new System.Windows.Forms.TextBox();
-			this.label24 = new System.Windows.Forms.Label();
-			this.label25 = new System.Windows.Forms.Label();
-			this.t2TbBits = new System.Windows.Forms.TextBox();
+			this.t2LblMaskBin = new System.Windows.Forms.Label();
+			this.label12 = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
@@ -276,6 +278,8 @@
 			// 
 			// tabPage2
 			// 
+			this.tabPage2.Controls.Add(this.t2LblMaskBin);
+			this.tabPage2.Controls.Add(this.label12);
 			this.tabPage2.Controls.Add(this.t2TbBits);
 			this.tabPage2.Controls.Add(this.label25);
 			this.tabPage2.Controls.Add(this.t2TbIp);
@@ -290,7 +294,7 @@
 			this.tabPage2.Controls.Add(this.label17);
 			this.tabPage2.Controls.Add(this.t2LblNumOfHosts);
 			this.tabPage2.Controls.Add(this.label19);
-			this.tabPage2.Controls.Add(this.t2LblMaskBin);
+			this.tabPage2.Controls.Add(this.t2LblMaskDec);
 			this.tabPage2.Controls.Add(this.label21);
 			this.tabPage2.Controls.Add(this.t2LblIpBin);
 			this.tabPage2.Controls.Add(this.label23);
@@ -302,11 +306,43 @@
 			this.tabPage2.Text = "Net / Bits";
 			this.tabPage2.UseVisualStyleBackColor = true;
 			// 
+			// t2TbBits
+			// 
+			this.t2TbBits.Location = new System.Drawing.Point(284, 19);
+			this.t2TbBits.Name = "t2TbBits";
+			this.t2TbBits.Size = new System.Drawing.Size(100, 20);
+			this.t2TbBits.TabIndex = 35;
+			// 
+			// label25
+			// 
+			this.label25.AutoSize = true;
+			this.label25.Location = new System.Drawing.Point(265, 23);
+			this.label25.Name = "label25";
+			this.label25.Size = new System.Drawing.Size(12, 13);
+			this.label25.TabIndex = 34;
+			this.label25.Text = "/";
+			// 
+			// t2TbIp
+			// 
+			this.t2TbIp.Location = new System.Drawing.Point(65, 20);
+			this.t2TbIp.Name = "t2TbIp";
+			this.t2TbIp.Size = new System.Drawing.Size(194, 20);
+			this.t2TbIp.TabIndex = 33;
+			// 
+			// label24
+			// 
+			this.label24.AutoSize = true;
+			this.label24.Location = new System.Drawing.Point(42, 23);
+			this.label24.Name = "label24";
+			this.label24.Size = new System.Drawing.Size(17, 13);
+			this.label24.TabIndex = 32;
+			this.label24.Text = "IP";
+			// 
 			// t2LblBroadcast
 			// 
 			this.t2LblBroadcast.AutoSize = true;
 			this.t2LblBroadcast.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.t2LblBroadcast.Location = new System.Drawing.Point(131, 198);
+			this.t2LblBroadcast.Location = new System.Drawing.Point(131, 219);
 			this.t2LblBroadcast.Name = "t2LblBroadcast";
 			this.t2LblBroadcast.Size = new System.Drawing.Size(56, 14);
 			this.t2LblBroadcast.TabIndex = 31;
@@ -315,7 +351,7 @@
 			// label11
 			// 
 			this.label11.AutoSize = true;
-			this.label11.Location = new System.Drawing.Point(34, 198);
+			this.label11.Location = new System.Drawing.Point(34, 219);
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(80, 13);
 			this.label11.TabIndex = 30;
@@ -325,7 +361,7 @@
 			// 
 			this.t2LblNetAddr.AutoSize = true;
 			this.t2LblNetAddr.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.t2LblNetAddr.Location = new System.Drawing.Point(131, 116);
+			this.t2LblNetAddr.Location = new System.Drawing.Point(131, 137);
 			this.t2LblNetAddr.Name = "t2LblNetAddr";
 			this.t2LblNetAddr.Size = new System.Drawing.Size(49, 14);
 			this.t2LblNetAddr.TabIndex = 29;
@@ -334,7 +370,7 @@
 			// label13
 			// 
 			this.label13.AutoSize = true;
-			this.label13.Location = new System.Drawing.Point(65, 116);
+			this.label13.Location = new System.Drawing.Point(65, 137);
 			this.label13.Name = "label13";
 			this.label13.Size = new System.Drawing.Size(49, 13);
 			this.label13.TabIndex = 28;
@@ -344,7 +380,7 @@
 			// 
 			this.t2LblLastHost.AutoSize = true;
 			this.t2LblLastHost.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.t2LblLastHost.Location = new System.Drawing.Point(131, 171);
+			this.t2LblLastHost.Location = new System.Drawing.Point(131, 192);
 			this.t2LblLastHost.Name = "t2LblLastHost";
 			this.t2LblLastHost.Size = new System.Drawing.Size(49, 14);
 			this.t2LblLastHost.TabIndex = 27;
@@ -353,7 +389,7 @@
 			// label15
 			// 
 			this.label15.AutoSize = true;
-			this.label15.Location = new System.Drawing.Point(62, 171);
+			this.label15.Location = new System.Drawing.Point(62, 192);
 			this.label15.Name = "label15";
 			this.label15.Size = new System.Drawing.Size(52, 13);
 			this.label15.TabIndex = 26;
@@ -363,7 +399,7 @@
 			// 
 			this.t2LblFirstHost.AutoSize = true;
 			this.t2LblFirstHost.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.t2LblFirstHost.Location = new System.Drawing.Point(131, 143);
+			this.t2LblFirstHost.Location = new System.Drawing.Point(131, 164);
 			this.t2LblFirstHost.Name = "t2LblFirstHost";
 			this.t2LblFirstHost.Size = new System.Drawing.Size(49, 14);
 			this.t2LblFirstHost.TabIndex = 25;
@@ -372,7 +408,7 @@
 			// label17
 			// 
 			this.label17.AutoSize = true;
-			this.label17.Location = new System.Drawing.Point(68, 143);
+			this.label17.Location = new System.Drawing.Point(68, 164);
 			this.label17.Name = "label17";
 			this.label17.Size = new System.Drawing.Size(46, 13);
 			this.label17.TabIndex = 24;
@@ -381,7 +417,7 @@
 			// t2LblNumOfHosts
 			// 
 			this.t2LblNumOfHosts.AutoSize = true;
-			this.t2LblNumOfHosts.Location = new System.Drawing.Point(131, 225);
+			this.t2LblNumOfHosts.Location = new System.Drawing.Point(131, 246);
 			this.t2LblNumOfHosts.Name = "t2LblNumOfHosts";
 			this.t2LblNumOfHosts.Size = new System.Drawing.Size(35, 13);
 			this.t2LblNumOfHosts.TabIndex = 23;
@@ -390,30 +426,31 @@
 			// label19
 			// 
 			this.label19.AutoSize = true;
-			this.label19.Location = new System.Drawing.Point(70, 225);
+			this.label19.Location = new System.Drawing.Point(70, 246);
 			this.label19.Name = "label19";
 			this.label19.Size = new System.Drawing.Size(44, 13);
 			this.label19.TabIndex = 22;
 			this.label19.Text = "# Hosts";
 			// 
-			// t2LblMaskBin
+			// t2LblMaskDec
 			// 
-			this.t2LblMaskBin.AutoSize = true;
-			this.t2LblMaskBin.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.t2LblMaskBin.Location = new System.Drawing.Point(131, 86);
-			this.t2LblMaskBin.Name = "t2LblMaskBin";
-			this.t2LblMaskBin.Size = new System.Drawing.Size(49, 14);
-			this.t2LblMaskBin.TabIndex = 21;
-			this.t2LblMaskBin.Text = "label5";
+			this.t2LblMaskDec.AutoSize = true;
+			this.t2LblMaskDec.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.t2LblMaskDec.Location = new System.Drawing.Point(131, 79);
+			this.t2LblMaskDec.Name = "t2LblMaskDec";
+			this.t2LblMaskDec.Size = new System.Drawing.Size(49, 14);
+			this.t2LblMaskDec.TabIndex = 21;
+			this.t2LblMaskDec.Text = "label5";
 			// 
 			// label21
 			// 
 			this.label21.AutoSize = true;
-			this.label21.Location = new System.Drawing.Point(29, 86);
+			this.label21.Location = new System.Drawing.Point(61, 79);
 			this.label21.Name = "label21";
-			this.label21.Size = new System.Drawing.Size(85, 13);
+			this.label21.Size = new System.Drawing.Size(53, 13);
 			this.label21.TabIndex = 20;
-			this.label21.Text = "Net Mask Binary";
+			this.label21.Text = "Net Mask";
+			this.label21.Click += new System.EventHandler(this.label21_Click);
 			// 
 			// t2LblIpBin
 			// 
@@ -434,37 +471,24 @@
 			this.label23.TabIndex = 18;
 			this.label23.Text = "Ip Binary";
 			// 
-			// t2TbIp
+			// t2LblMaskBin
 			// 
-			this.t2TbIp.Location = new System.Drawing.Point(65, 20);
-			this.t2TbIp.Name = "t2TbIp";
-			this.t2TbIp.Size = new System.Drawing.Size(194, 20);
-			this.t2TbIp.TabIndex = 33;
+			this.t2LblMaskBin.AutoSize = true;
+			this.t2LblMaskBin.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.t2LblMaskBin.Location = new System.Drawing.Point(131, 107);
+			this.t2LblMaskBin.Name = "t2LblMaskBin";
+			this.t2LblMaskBin.Size = new System.Drawing.Size(49, 14);
+			this.t2LblMaskBin.TabIndex = 37;
+			this.t2LblMaskBin.Text = "label5";
 			// 
-			// label24
+			// label12
 			// 
-			this.label24.AutoSize = true;
-			this.label24.Location = new System.Drawing.Point(42, 23);
-			this.label24.Name = "label24";
-			this.label24.Size = new System.Drawing.Size(17, 13);
-			this.label24.TabIndex = 32;
-			this.label24.Text = "IP";
-			// 
-			// label25
-			// 
-			this.label25.AutoSize = true;
-			this.label25.Location = new System.Drawing.Point(265, 23);
-			this.label25.Name = "label25";
-			this.label25.Size = new System.Drawing.Size(12, 13);
-			this.label25.TabIndex = 34;
-			this.label25.Text = "/";
-			// 
-			// t2TbBits
-			// 
-			this.t2TbBits.Location = new System.Drawing.Point(284, 19);
-			this.t2TbBits.Name = "t2TbBits";
-			this.t2TbBits.Size = new System.Drawing.Size(100, 20);
-			this.t2TbBits.TabIndex = 35;
+			this.label12.AutoSize = true;
+			this.label12.Location = new System.Drawing.Point(29, 107);
+			this.label12.Name = "label12";
+			this.label12.Size = new System.Drawing.Size(85, 13);
+			this.label12.TabIndex = 36;
+			this.label12.Text = "Net Mask Binary";
 			// 
 			// Form1
 			// 
@@ -520,10 +544,12 @@
 		private System.Windows.Forms.Label label17;
 		private System.Windows.Forms.Label t2LblNumOfHosts;
 		private System.Windows.Forms.Label label19;
-		private System.Windows.Forms.Label t2LblMaskBin;
+		private System.Windows.Forms.Label t2LblMaskDec;
 		private System.Windows.Forms.Label label21;
 		private System.Windows.Forms.Label t2LblIpBin;
 		private System.Windows.Forms.Label label23;
+		private System.Windows.Forms.Label t2LblMaskBin;
+		private System.Windows.Forms.Label label12;
 	}
 }
 

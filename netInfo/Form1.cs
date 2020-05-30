@@ -20,6 +20,16 @@ namespace netInfo
 			tbNetMask.TextChanged += onNet1Changed;
 
 			updateTab1();
+
+			t2TbIp.TextChanged += onNet2Changed;
+			t2TbBits.TextChanged += onNet2Changed;
+
+			updateTab2();
+		}
+
+		private void label21_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
