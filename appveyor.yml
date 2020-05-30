@@ -3,5 +3,4 @@ configuration:
   - Release
 
 platform:
-  - x86
   - Any CPU
