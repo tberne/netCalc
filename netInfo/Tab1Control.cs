@@ -51,7 +51,7 @@ namespace netInfo
 			var netHost = convertToBinIp(ip & mask);
 			lblNetAddr.Text = netHost + " (" + convertBinaryToReadable(netHost) + ")";
 
-			var firstHost = convertToBinIp(ip & mask + 1);
+			var firstHost = convertToBinIp((ip & mask) + 1);
 			lblFirstHost.Text = firstHost + " (" + convertBinaryToReadable(firstHost) + ")";
 
 			var broadCastIp = (ip & mask) | ~mask;

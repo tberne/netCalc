@@ -110,7 +110,7 @@ namespace netInfo
 			var netHost = convertToBinIp(ip & iNetMask);
 			t2LblNetAddr.Text = netHost + " (" + convertBinaryToReadable(netHost) + ")";
 
-			var firstHost = convertToBinIp(ip & iNetMask + 1);
+			var firstHost = convertToBinIp((ip & iNetMask) + 1);
 			t2LblFirstHost.Text = firstHost + " (" + convertBinaryToReadable(firstHost) + ")";
 
 			var broadCastIp = (ip & iNetMask) | ~iNetMask;
