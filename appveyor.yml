@@ -4,3 +4,7 @@ configuration:
 
 platform:
   - Any CPU
+
+artifacts:
+  - path netInfo\bin\$(configuration)\*
+    name $(configuration)
